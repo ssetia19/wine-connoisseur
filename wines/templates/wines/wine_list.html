@@ -1,0 +1,61 @@
+{% extends 'base_layout.html' %}
+
+{% load static from staticfiles %}
+
+{% block content %}
+<form class="search" action="{% url 'wines:search' %}" method="GET" type="get">
+	{% csrf_token %}
+	<input class="search-box" type="text" placeholder="Enter a Country, Province, Region" name="search-place-box">
+	<input class="search-box" type="text" placeholder="Enter a grape type" name="search-grape-box"><br>
+	<button class ="submit" type="submit">Filter</button>
+</form>
+<form class="sort" action="{% url 'wines:sort' %}" method="GET">
+	{% csrf_token %}
+	<button class="submit" type="submit">Sort</button>
+</form>
+	<h1>Wines List</h1>
+	<div class="wines">
+		<table>
+			<tr><th>Winery</th>
+			<th>Description</th>
+			<th>Country</th>
+			<th>Province</th>
+			<th>Region_1</th>
+			<th>Region_2</th>
+			<th>Variety</th>
+			<th>Price</th>
+		</tr>
+			{% for wine in wines %}
+				<div class="wine">
+					<tr>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.winery}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.snippet}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.country}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.province}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.region_1}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.region_2}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.variety}}</a></td>
+					<td><a href="{% url 'wines:detail' slug=wine.id %}">{{wine.price}}</a></td>
+					</tr>
+				</div>
+			{% endfor %}
+		</table><br>
+		<div class="pagination">
+    <span class="step-links">
+        {% if wines.has_previous %}
+            <a href="?page=1">&laquo; first</a>&nbsp;&nbsp;
+            <a href="?page={{ wines.previous_page_number }}">previous</a>&nbsp;&nbsp;
+        {% endif %}
+
+        <span class="current">
+            Page {{ wines.number }} of {{ wines.paginator.num_pages }}.&nbsp;&nbsp;
+        </span>
+
+        {% if wines.has_next %}
+            <a href="?page={{ wines.next_page_number }}">next</a>&nbsp;&nbsp;
+            <a href="?page={{ wines.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+	</div>
+{% endblock %}

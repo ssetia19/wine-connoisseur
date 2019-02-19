@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+	<div class="wine-detail">
+		<div class="wine">
+			<h2>{{ wine.winery }}</h2>
+			<p>{{ wine.description }}</p>
+			<p><b style="color:#00dba0">Designation : </b>{{ wine.designation }}</p>
+			<p><b style="color:#00dba0">Points: </b>{{ wine.points }}</p>
+			<p><b style="color:#00dba0">Country: </b>{{ wine.country }}</p>
+			<p><b style="color:#00dba0">Province: </b>{{ wine.province }}</p>
+			<p><b style="color:#00dba0">Regions: </b>{{ wine.region_1 }} , {{ wine.region_2 }}</p>
+			<p><b style="color:#00dba0">Variety: </b>{{ wine.variety }}</p>
+			<p><b style="color:#00dba0">Price: </b>{{ wine.price }}</p>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,220 @@
+body{
+    background-color: #0f121f;
+    background-image: url(stars.png);
+    background-repeat-y: no-repeat;
+    color: #fff;
+}
+
+body *{
+    font-family: Ubuntu;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper h1{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom:30px;
+    font-size: 2.4em
+}
+div.wrapper .search {
+    border:  #00dba0;
+    padding:0;
+
+}
+div.wrapper .search .search-box{
+    width:90%;
+    height:30px;
+    background-color:#0f121f;
+    text-decoration:dotted;
+    color:#fff;
+}
+div.wrapper .search .submit,.sort .submit{
+    margin:10px;
+    height:40px;
+    border-radius:10px;
+    border-color:#00dba0;
+    color: #00dba0;
+    background-color:#0f121f;
+    cursor:pointer;
+    float:left;
+    
+}
+
+table{
+    border:1px solid #00dba0;
+    text-align:center;
+}
+
+table tr th{
+    color:#00dba0;
+    
+}
+th,td{
+    padding:9px;
+}
+tr:hover {background-color: #8FBC8F;}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0px;
+}
+
+
+nav{
+    justify-self:end;
+}
+nav li{
+    display:inline-block;
+    margin-left:20px;
+}
+
+nav button{
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 1em;
+}
+
+.articles{
+    
+}
+.item,.wine-detail{
+    padding: 10px;
+    border: 1px solid #00dba0;
+    position: relative;
+    padding-bottom: 40px;
+}
+.item{
+    margin-top:30px;
+}
+
+.item h2, .article h2{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.item .author{
+    padding:10px;
+    background: #00dba0;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #0f121f;
+    
+    
+}
+
+.article-detail .article{
+    padding: 0;
+}
+
+
+
+.wine-detail .wine h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+
+
+.site-form{
+    margin-top:60px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+    display:block;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+a.highlight{
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 4px;
+    color: #00dba0;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size:0.9em;
+    display:block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type:none;
+    border: 1px solid #ff5722;
+    color: #ff5722;
+    margin: 10px 0;
+}
+.errorlist{
+    padding:0;
+}
+.site-form input[type="submit"]{
+    background: #00dba0;
+    border:0;
+    color: #fff;
+    font-size:1.2em;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.profile-detail{
+    padding:10px;
+    border: 1px solid #00dba0;
+    
+    padding-bottom: 10px;
+    margin-top:50px;
+
+}
+
+.profile-detail .profile{
+    padding:10px;
+
+}
+.profile-detail .profile h2{
+
+    text-align: center;
+    padding-top:0px;
+    font-size: 3em;
+    font-family: Algerian;
+    
+}
+.profile-detail .profile ul{
+    font-size:1.5em;
+    padding:10px;
+    margin:20px auto;
+    line-height:2;
+}
+.profile-detail .profile ul b{
+    color:#00dba0
+}
+
+.pagination{
+    text-align:center;
+    
+}
+.pagination .step-links a{
+    color:#00dba0;
+}
