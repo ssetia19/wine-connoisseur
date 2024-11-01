@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'wine_shop.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
+# using django internal mysql database
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql',
